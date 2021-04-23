@@ -1,1 +1,6 @@
+#! /bin/bash
 
+# Run program unless it's already running.
+# Stolen from http://awesome.naquadah.org/wiki/Autostart
+
+pgrep $@ > /dev/null || ($@ &)
